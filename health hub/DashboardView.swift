@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DashboardView.swift
 //  health hub
 //
 //  Created by Bryan Gomez on 4/26/24.
@@ -21,7 +21,7 @@ enum HealthMetricContext: CaseIterable, Identifiable {
     }
 }
 
-struct ContentView: View {
+struct DashboardView: View {
     
     var isSteps: Bool { selectedStat == .steps }
     
@@ -90,7 +90,7 @@ struct ContentView: View {
             .padding()
             .navigationTitle("Dashbaord")
             .navigationDestination(for: HealthMetricContext.self) { metric in
-                Text(metric.title)
+                HealthDataListView(metric: metric)
             }
         }
         .tint(isSteps ? .pink : .indigo)
@@ -98,5 +98,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    DashboardView()
 }
