@@ -17,18 +17,11 @@ struct HealthDataListView: View {
     
     var body: some View {
         List(0..<28) { i in
-//            HStack {
-//                Text(Date(), format: .dateTime.month().day().year())
-//                Spacer()
-//               // Text(10000, format: .number.precision(.fractionLength(metric == .steps ? 0 : 1)))
-//                
-//            }
-            LabeledContent {
-                               Text(1000, format: .number.precision(.fractionLength(metric == .steps ? 0 : 1)))
-                                   .foregroundStyle(.primary)
-                           } label: {
-                               Text(Date(), format: .dateTime.month().day().year())
-                           }
+            HStack {
+                Text(Date(), format: .dateTime.month().day().year())
+                Spacer()
+                Text(10000, format: .number.precision(.fractionLength(metric == .steps ? 0 : 1)))
+            }
         }
         .navigationTitle(metric.title)
         .sheet(isPresented: $isShowingAddData) {
