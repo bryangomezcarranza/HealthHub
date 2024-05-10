@@ -67,9 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				8814805F2BEAA9DA00DA7C9E /* StepBarChart.swift */,
+				8814806F2BEBE59100DA7C9E /* StepPieChart.swift */,
 				881480652BEAB0D300DA7C9E /* ChartMath.swift */,
 				881480672BEAB0FC00DA7C9E /* ChartDataTypes.swift */,
-				8814806F2BEBE59100DA7C9E /* StepPieChart.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
