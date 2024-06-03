@@ -13,6 +13,8 @@
 		8814806B2BEAB1A500DA7C9E /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8814806A2BEAB1A500DA7C9E /* Date+Ext.swift */; };
 		8814806E2BEAB4D700DA7C9E /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 8814806D2BEAB4D700DA7C9E /* Algorithms */; };
 		881480702BEBE59100DA7C9E /* StepPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8814806F2BEBE59100DA7C9E /* StepPieChart.swift */; };
+		881480722BFD5ACC00DA7C9E /* WeightLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881480712BFD5ACC00DA7C9E /* WeightLineChart.swift */; };
+		881480752BFD5CC500DA7C9E /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881480742BFD5CC500DA7C9E /* MockData.swift */; };
 		88A4E8142BDD6AB50030B513 /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4E8132BDD6AB50030B513 /* HealthDataListView.swift */; };
 		88A4E8162BDDA1E00030B513 /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4E8152BDDA1E00030B513 /* HealthKitPermissionPrimingView.swift */; };
 		88A4E8192BDEBB6C0030B513 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4E8182BDEBB6C0030B513 /* HealthKitManager.swift */; };
@@ -29,6 +31,8 @@
 		881480672BEAB0FC00DA7C9E /* ChartDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataTypes.swift; sourceTree = "<group>"; };
 		8814806A2BEAB1A500DA7C9E /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		8814806F2BEBE59100DA7C9E /* StepPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPieChart.swift; sourceTree = "<group>"; };
+		881480712BFD5ACC00DA7C9E /* WeightLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLineChart.swift; sourceTree = "<group>"; };
+		881480742BFD5CC500DA7C9E /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		88A4E8132BDD6AB50030B513 /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
 		88A4E8152BDDA1E00030B513 /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
 		88A4E8172BDDA50C0030B513 /* health hub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "health hub.entitlements"; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				8814805F2BEAA9DA00DA7C9E /* StepBarChart.swift */,
+				881480712BFD5ACC00DA7C9E /* WeightLineChart.swift */,
 				8814806F2BEBE59100DA7C9E /* StepPieChart.swift */,
 				881480652BEAB0D300DA7C9E /* ChartMath.swift */,
 				881480672BEAB0FC00DA7C9E /* ChartDataTypes.swift */,
@@ -98,6 +103,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		881480732BFD5C8800DA7C9E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				881480692BEAB18900DA7C9E /* Extensions */,
+				881480742BFD5CC500DA7C9E /* MockData.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		88C9223B2BDC26F600E76848 = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +133,7 @@
 			children = (
 				88A4E8172BDDA50C0030B513 /* health hub.entitlements */,
 				88C922472BDC26F600E76848 /* health_hubApp.swift */,
-				881480692BEAB18900DA7C9E /* Extensions */,
+				881480732BFD5C8800DA7C9E /* Utilities */,
 				881480642BEAAF8B00DA7C9E /* Managers */,
 				881480632BEAAF7B00DA7C9E /* Model */,
 				881480622BEAAF5F00DA7C9E /* Charts */,
@@ -217,6 +231,7 @@
 				88A4E8142BDD6AB50030B513 /* HealthDataListView.swift in Sources */,
 				88C9224A2BDC26F600E76848 /* DashboardView.swift in Sources */,
 				881480602BEAA9DA00DA7C9E /* StepBarChart.swift in Sources */,
+				881480752BFD5CC500DA7C9E /* MockData.swift in Sources */,
 				88C922482BDC26F600E76848 /* health_hubApp.swift in Sources */,
 				88A4E8192BDEBB6C0030B513 /* HealthKitManager.swift in Sources */,
 				88A4E8162BDDA1E00030B513 /* HealthKitPermissionPrimingView.swift in Sources */,
@@ -224,6 +239,7 @@
 				88C1E60D2BE176D7002E1686 /* HealthMetric.swift in Sources */,
 				881480682BEAB0FC00DA7C9E /* ChartDataTypes.swift in Sources */,
 				881480702BEBE59100DA7C9E /* StepPieChart.swift in Sources */,
+				881480722BFD5ACC00DA7C9E /* WeightLineChart.swift in Sources */,
 				8814806B2BEAB1A500DA7C9E /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
