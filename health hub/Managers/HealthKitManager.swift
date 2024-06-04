@@ -72,7 +72,7 @@ import Observation
     func addSimulatorData() async  {
         var mocSamples: [HKQuantitySample] = []
         
-        for i in 0..<28 {
+        for i in 0..<27 {
             guard
                 let startDate = Calendar.current.date(byAdding: .day, value: -i, to: .now),
                 let endDate = Calendar.current.date(byAdding: .second, value: 1, to: startDate)
