@@ -16,6 +16,7 @@ import Observation
     
     var stepData: [HealthMetric] = []
     var weightData: [HealthMetric] = []
+    var weightDiffData: [HealthMetric] = []
     
     func fetchWeight() async {
         let calendar = Calendar.current
@@ -36,6 +37,32 @@ import Observation
             let weights = try await weightQuery.result(for: store)
             
             weightData = weights.statistics().map {
+                .init(date: $0.startDate, value: $0.mostRecentQuantity()?.doubleValue(for: .pound()) ?? 0)
+            }
+        } catch {
+            
+        }
+    }
+    
+    func fetchWeightDifferentials() async {
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: .now)
+        
+        guard
+            let endDate = calendar.date(byAdding: .day, value: 1, to: today),
+            let startDate = calendar.date(byAdding: .day, value: -29, to: endDate)
+        else { return }
+        
+        let queryPredicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate)
+        let weightType = HKQuantityType(.bodyMass)
+        let samplePredicate = HKSamplePredicate.quantitySample(type: weightType, predicate: queryPredicate)
+        
+        let weightQuery = HKStatisticsCollectionQueryDescriptor(predicate: samplePredicate, options: .mostRecent, anchorDate: endDate, intervalComponents: .init(day: 1))
+        
+        do {
+            let weights = try await weightQuery.result(for: store)
+            
+            weightDiffData = weights.statistics().map {
                 .init(date: $0.startDate, value: $0.mostRecentQuantity()?.doubleValue(for: .pound()) ?? 0)
             }
         } catch {
@@ -72,7 +99,7 @@ import Observation
     func addSimulatorData() async  {
         var mocSamples: [HKQuantitySample] = []
         
-        for i in 0..<28 {
+        for i in 0..<27 {
             guard
                 let startDate = Calendar.current.date(byAdding: .day, value: -i, to: .now),
                 let endDate = Calendar.current.date(byAdding: .second, value: 1, to: startDate)
